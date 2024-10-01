@@ -1,0 +1,16 @@
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\bin\Debug\net8.0-windows\GestorTareas.exe
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\bin\Debug\net8.0-windows\GestorTareas.deps.json
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\bin\Debug\net8.0-windows\GestorTareas.runtimeconfig.json
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\bin\Debug\net8.0-windows\GestorTareas.dll
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\bin\Debug\net8.0-windows\GestorTareas.pdb
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.Form.resources
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.csproj.GenerateResource.cache
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.AssemblyInfoInputs.cache
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.AssemblyInfo.cs
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.csproj.CoreCompileInputs.cache
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.dll
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\refint\GestorTareas.dll
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.pdb
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\GestorTareas.genruntimeconfig.cache
+C:\Users\juanc\source\repos\GestorTareas\GestorTareas\obj\Debug\net8.0-windows\ref\GestorTareas.dll
