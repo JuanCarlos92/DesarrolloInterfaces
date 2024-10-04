@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juanc\\Documents\\GitHub\\DesarrolloInterfaces\\ReproductorMusica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1F8AC44-B71F-4622-8BBE-99624CC40F5E}|ReproductorMusica\\ReproductorMusica.vbproj|c:\\users\\juanc\\documents\\github\\desarrollointerfaces\\reproductormusica\\reproductormusica\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D1F8AC44-B71F-4622-8BBE-99624CC40F5E}|ReproductorMusica\\ReproductorMusica.vbproj|solutionrelative:reproductormusica\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1F8AC44-B71F-4622-8BBE-99624CC40F5E}|ReproductorMusica\\ReproductorMusica.vbproj|c:\\users\\juanc\\documents\\github\\desarrollointerfaces\\reproductormusica\\reproductormusica\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D1F8AC44-B71F-4622-8BBE-99624CC40F5E}|ReproductorMusica\\ReproductorMusica.vbproj|solutionrelative:reproductormusica\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\juanc\\Documents\\GitHub\\DesarrolloInterfaces\\ReproductorMusica\\ReproductorMusica\\Form1.vb",
+              "RelativeDocumentMoniker": "ReproductorMusica\\Form1.vb",
+              "ToolTip": "C:\\Users\\juanc\\Documents\\GitHub\\DesarrolloInterfaces\\ReproductorMusica\\ReproductorMusica\\Form1.vb",
+              "RelativeToolTip": "ReproductorMusica\\Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-03T09:32:41.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\juanc\\Documents\\GitHub\\DesarrolloInterfaces\\ReproductorMusica\\ReproductorMusica\\Form1.vb",
+              "RelativeDocumentMoniker": "ReproductorMusica\\Form1.vb",
+              "ToolTip": "C:\\Users\\juanc\\Documents\\GitHub\\DesarrolloInterfaces\\ReproductorMusica\\ReproductorMusica\\Form1.vb [Dise\u00F1o]",
+              "RelativeToolTip": "ReproductorMusica\\Form1.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-10-03T09:22:16.012Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
