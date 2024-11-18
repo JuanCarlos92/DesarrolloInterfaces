@@ -1,0 +1,13 @@
+{
+  "dni": "dsdfd",
+  "nombre": "dsfsd",
+  "direccion": "sdfsd",
+  "localidad": "fsdf",
+  "provincia": "dsfd",
+  "fechaLlegada": "2024-11-21",
+  "fechaSalida": "2024-11-22",
+  "numHabitacion": 3,
+  "tipoHabitacion": "Doble",
+  "esFumador": true,
+  "regimenAlojamiento": "Media pensión"
+}

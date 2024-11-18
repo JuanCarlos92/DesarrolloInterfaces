@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="719.0" style="-fx-border-color: DarkSeaGreen; -fx-background-color: Azure;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.din_t4_reservashotel.controllers.Controller">
+   <children>
+      <Label layoutX="44.0" layoutY="33.0" text="Datos del cliente" underline="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btAceptar" layoutX="449.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleAceptar" prefHeight="31.0" prefWidth="103.0" text="Aceptar">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <Label layoutX="44.0" layoutY="75.0" text="DNI">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <Label layoutX="44.0" layoutY="111.0" text="Dirección">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <Button fx:id="btCancelar" layoutX="576.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="31.0" prefWidth="103.0" text="Cancelar">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <TextField fx:id="tfDni" layoutX="114.0" layoutY="71.0" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: Beige; -fx-border-color: DarkSeaGreen;">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="tfDireccion" layoutX="114.0" layoutY="107.0" prefHeight="25.0" prefWidth="570.0" style="-fx-background-color: Beige; -fx-border-color: DarkSeaGreen;">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="tfNombre" layoutX="344.0" layoutY="71.0" prefHeight="25.0" prefWidth="339.0" style="-fx-background-color: Beige; -fx-border-color: DarkSeaGreen;">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="tfLocalidad" layoutX="231.0" layoutY="141.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: Beige; -fx-border-color: DarkSeaGreen;">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></TextField>
+      <Label layoutX="284.0" layoutY="75.0" text="Nombre">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <Label layoutX="158.0" layoutY="145.0" text="Localidad">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <Label layoutX="377.0" layoutY="145.0" text="Provincia">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <TextField fx:id="tfProvincia" layoutX="443.0" layoutY="141.0" prefHeight="25.0" prefWidth="241.0" style="-fx-background-color: Beige; -fx-border-color: DarkSeaGreen;">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></TextField>
+      <Button fx:id="btLimpiar" layoutX="63.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleLimpiar" prefHeight="31.0" prefWidth="103.0" text="Limpiar">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Button>
+      <Label layoutX="44.0" layoutY="178.0" text="Datos de la reserva" underline="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="215.0" text="Fecha de llegada">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <Label layoutX="361.0" layoutY="215.0" text="Fecha de salida">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <DatePicker fx:id="dpFechaLlegada" layoutX="41.0" layoutY="238.0" prefHeight="200.0" prefWidth="314.0" style="-fx-background-color: DarkSeaGreen;" />
+      <DatePicker fx:id="dpFechaSalida" layoutX="362.0" layoutY="238.0" prefHeight="200.0" prefWidth="322.0" style="-fx-background-color: DarkSeaGreen;" />
+      <Label layoutX="44.0" layoutY="451.0" text="Número de habitaciones">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <Label layoutX="276.0" layoutY="451.0" text="Tipo de habitación">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></Label>
+      <CheckBox fx:id="checkboxFumador" layoutX="607.0" layoutY="451.0" mnemonicParsing="false" text="Fumador">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></CheckBox>
+      <ComboBox fx:id="cboxTipoHabitacion" layoutX="401.0" layoutY="448.0" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: Beige; -fx-border-color: DarkSeaGreen;" />
+      <Spinner fx:id="spinnerNumHabitacion" layoutX="197.0" layoutY="447.0" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: Beige;" />
+      <RadioButton fx:id="rbAlojamientoDesayuno" layoutX="71.0" layoutY="520.0" mnemonicParsing="false" text="Alojamiento y desayuno">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="rbMediaPension" layoutX="71.0" layoutY="552.0" mnemonicParsing="false" text="Media pensión">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="rbPensionCompleta" layoutX="71.0" layoutY="589.0" mnemonicParsing="false" text="Pensión completa">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font></RadioButton>
+      <Label layoutX="46.0" layoutY="486.0" text="Régimen">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="lbFumador" layoutX="353.0" layoutY="522.0" prefHeight="77.0" prefWidth="322.0" wrapText="true" />
+   </children>
+</Pane>
