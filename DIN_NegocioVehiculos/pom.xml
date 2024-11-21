@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.din_negociovehiculos/org.example.din_negociovehiculos.HelloApplication
+                                org.example.din_negociovehiculos/org.example.din_negociovehiculos.main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

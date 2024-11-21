@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.din_negociovehiculos.controllers.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleCocheElectrico" text="Coche electricos" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleBicicletasElectricas" text="Biciclera electricas" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Salir" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="146.0" prefWidth="221.0" spacing="10" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cocheElectricoBt" mnemonicParsing="false" onAction="#handleCocheElectrico" prefHeight="25.0" prefWidth="113.0" text="Coche electricos" />
+            <Button fx:id="biciElectricaBt" mnemonicParsing="false" onAction="#handleBicicletasElectricas" prefHeight="25.0" prefWidth="113.0" text="Bicicleta electricas" />
+            <Button fx:id="salirBt" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="113.0" text="Salir" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
