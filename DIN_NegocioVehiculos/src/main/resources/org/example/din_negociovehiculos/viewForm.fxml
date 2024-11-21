@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="538.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="nombreLb" layoutX="39.0" layoutY="53.0" text="Nombre"/>
+      <Label fx:id="apellidoLb" layoutX="258.0" layoutY="53.0" text="Apellido" />
+      <Label fx:id="telefonoLb" layoutX="39.0" layoutY="97.0" text="Teléfono" />
+      <Label fx:id="dniLb" layoutX="259.0" layoutY="97.0" text="DNI/CIF" />
+      <TextField fx:id="nombreTf" layoutX="95.0" layoutY="49.0">
+         <tooltip>
+            <Tooltip text="Introduce el nombre" />
+         </tooltip></TextField>
+      <TextField fx:id="dniTf" layoutX="314.0" layoutY="93.0">
+         <tooltip>
+            <Tooltip text="Introduce el DNI/CIF" />
+         </tooltip></TextField>
+      <TextField fx:id="apellidoTf" layoutX="314.0" layoutY="49.0">
+         <tooltip>
+            <Tooltip text="Introduce el apellido" />
+         </tooltip></TextField>
+      <TextField fx:id="telefonoTf" layoutX="95.0" layoutY="93.0">
+         <tooltip>
+            <Tooltip text="Introduce el número de telefono" />
+         </tooltip></TextField>
+      <Label layoutX="39.0" layoutY="14.0" text="Datos del usuario">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fechainicioDatePicker" layoutX="39.0" layoutY="194.0" prefHeight="45.0" prefWidth="200.0" />
+      <DatePicker fx:id="fechaFinDatePicker" layoutX="266.0" layoutY="194.0" prefHeight="45.0" prefWidth="200.0" />
+      <Label layoutX="39.0" layoutY="133.0" text="Reserva">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fechaIncioLb" layoutX="39.0" layoutY="171.0" text="Fecha de Inicio" />
+      <Label fx:id="fechaFinLb" layoutX="265.0" layoutY="171.0" text="Fin de alquiler" />
+      <Label fx:id="tipoVehiculoLb" layoutX="41.0" layoutY="264.0" text="Tipo Vehiculo" />
+      <ComboBox fx:id="tipovehiculoCombobox" layoutX="123.0" layoutY="260.0" prefHeight="25.0" prefWidth="118.0" />
+      <Label fx:id="edadLb" layoutX="268.0" layoutY="264.0" text="Edad " />
+      <CheckBox fx:id="cadenaCheckbox" layoutX="39.0" layoutY="334.0" mnemonicParsing="false" text="Cadenas" />
+      <CheckBox fx:id="cablecargaCheckbox" layoutX="368.0" layoutY="264.0" mnemonicParsing="false" text="Cable de carga" />
+      <Spinner fx:id="edadSpinner" layoutX="305.0" layoutY="260.0" prefHeight="25.0" prefWidth="53.0" />
+      <ImageView fitHeight="89.0" fitWidth="200.0" layoutX="266.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="servicioExtraLb" layoutX="37.0" layoutY="305.0" text="Servicios extras" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cacelacionCheckbox" layoutX="39.0" layoutY="360.0" mnemonicParsing="false" text="Cancelación gratuita" />
+      <CheckBox fx:id="segurotodoriesgoCheckbox" layoutX="39.0" layoutY="387.0" mnemonicParsing="false" text="Seguro a todo riesgo" />
+      <CheckBox fx:id="sillabebeCheckbox" layoutX="39.0" layoutY="416.0" mnemonicParsing="false" text="Silla bebé" />
+      <CheckBox fx:id="noprecisaCheckbox" layoutX="39.0" layoutY="443.0" mnemonicParsing="false" text="No precisa" />
+      <Button fx:id="volverMenuBt" layoutX="39.0" layoutY="478.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="Volver al menú" />
+      <Button fx:id="aceptarBt" layoutX="332.0" layoutY="478.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="Aceptar" />
+      <Label fx:id="kilometroLb" layoutX="265.0" layoutY="307.0" text="Kilómetros" />
+      <TextField fx:id="kilometroTf" layoutX="266.0" layoutY="330.0" />
+   </children>
+</AnchorPane>
