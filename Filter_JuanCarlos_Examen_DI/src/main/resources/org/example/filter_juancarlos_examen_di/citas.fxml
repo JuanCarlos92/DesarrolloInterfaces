@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="438.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.filter_juancarlos_examen_di.controllers.ControllerCitas">
+   <children>
+      <Label layoutX="43.0" layoutY="23.0" prefHeight="35.0" prefWidth="451.0" text="GESTION DE CITAS DEL HOSPITAL" textFill="#077933">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombreLb" layoutX="62.0" layoutY="79.0" mnemonicParsing="true" text="_Nombre">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></Label>
+      <TextField fx:id="nombreTf" layoutX="152.0" layoutY="75.0" prefHeight="25.0" prefWidth="307.0" style="-fx-border-color: green;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="apellidoLb" layoutX="62.0" layoutY="126.0" mnemonicParsing="true" text="_Apellidos">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></Label>
+      <TextField fx:id="apellidoTf" layoutX="152.0" layoutY="122.0" prefHeight="25.0" prefWidth="307.0" style="-fx-border-color: green;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="dniLb" layoutX="62.0" layoutY="169.0" mnemonicParsing="true" text="_Dni">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></Label>
+      <TextField fx:id="dniTf" layoutX="152.0" layoutY="165.0" prefHeight="25.0" prefWidth="307.0" style="-fx-border-color: green;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="especialidadLb" layoutX="62.0" layoutY="215.0" text="Especialidad">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="especialidadCb" layoutX="152.0" layoutY="211.0" prefHeight="25.0" prefWidth="307.0" style="-fx-border-color: green;">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Traumatología" />
+            <String fx:value="Dermatología" />
+            <String fx:value="Cardiología" />
+            <String fx:value="Ginecología" />
+            <String fx:value="Urología" />
+         </FXCollections>
+      </items>
+   </ComboBox>
+      <Button fx:id="aceptarBt" layoutX="53.0" layoutY="323.0" mnemonicParsing="false" onAction="#manejadorGuardar" prefHeight="48.0" prefWidth="118.0" style="-fx-border-color: green;" text="Aceptar">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="cancelarBt" layoutX="369.0" layoutY="323.0" mnemonicParsing="false" onAction="#volverAlMenu" prefHeight="48.0" prefWidth="118.0" style="-fx-border-color: green;" text="Cancelar">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="limpiarBt" layoutX="209.0" layoutY="323.0" mnemonicParsing="false" onAction="#manejadorlimpiar" prefHeight="48.0" prefWidth="118.0" style="-fx-border-color: green;" text="Limpiar">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+      <DatePicker fx:id="fechaDatePicker" layoutX="152.0" layoutY="261.0" prefHeight="25.0" prefWidth="307.0" style="-fx-border-color: green;" />
+      <Label fx:id="fechaLb" layoutX="62.0" layoutY="265.0" mnemonicParsing="true" text="_Fecha Citas">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

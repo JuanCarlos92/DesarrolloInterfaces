@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.examen_di.controller.Controller">
+   <children>
+      <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="569.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Opciones">
+              <items>
+                <MenuItem fx:id="loginMenu" mnemonicParsing="false" onAction="#manejadorLogin" text="Login" />
+                  <MenuItem fx:id="formularioMenu" mnemonicParsing="false" onAction="#manejadorFormulario" text="Formulario" />
+                  <MenuItem fx:id="formularioSalir" mnemonicParsing="false" onAction="#manejadorSalir" text="Salir" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fitHeight="236.0" fitWidth="436.0" layoutX="85.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/menu.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="loginBt" layoutX="85.0" layoutY="313.0" mnemonicParsing="false" onAction="#manejadorLogin" prefHeight="51.0" prefWidth="182.0" text="Login" />
+      <Button fx:id="formularioBt" layoutX="323.0" layoutY="313.0" mnemonicParsing="false" onAction="#manejadorFormulario" prefHeight="51.0" prefWidth="182.0" text="Formulario" />
+   </children>
+</Pane>

@@ -1,4 +1,4 @@
-package org.example.din_negociovehiculos.controllers;
+package org.example.examen_di.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,8 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CocheElectricoFormController {
-
+public class ControllerForm {
     @FXML
     private Label nombreLb;
     @FXML
@@ -26,12 +25,10 @@ public class CocheElectricoFormController {
     private TextField telefonoTf;
     @FXML
     private TextField dniTf;
-
     @FXML
     private CheckBox cablecargaCheckbox;
     @FXML
     private Label cableCargaLb;
-
     @FXML
     private Button volverMenuBt;
 
@@ -59,17 +56,16 @@ public class CocheElectricoFormController {
         telefonoLb.setLabelFor(telefonoTf);
         dniLb.setLabelFor(dniTf);
 
-
-
     }
+
     @FXML
-    private void volverAlMenu(){
+    private void volverAlMenu() {
         Stage stage = (Stage) volverMenuBt.getScene().getWindow();
         stage.close();
 
         //abrir el menú
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/din_negociovehiculos/menuForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/examen_di/menu.fxml"));
             Stage newStage = new Stage();
             newStage.setScene(new Scene(loader.load()));
             newStage.setTitle("Menú Principal");
@@ -79,8 +75,9 @@ public class CocheElectricoFormController {
 
         }
     }
+
     @FXML
-    private void handleGuardar() {
+    private void manejadorGuardar() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Reserva Guardada");
         alert.setHeaderText("Reserva registrada con éxito");

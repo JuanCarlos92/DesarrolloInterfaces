@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="panel" prefHeight="348.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.filter_juancarlos_examen_di.controllers.ControllerLogin">
+    <children>
+        <Label fx:id="usuarioLb" layoutX="65.0" layoutY="46.0" mnemonicParsing="true" prefHeight="24.0" prefWidth="157.0" text="_Usuario">
+            <font>
+                <Font name="Comic Sans MS" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="contraLb" layoutX="65.0" layoutY="148.0" mnemonicParsing="true" text="_Contraseña">
+            <font>
+                <Font name="Comic Sans MS" size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usuarioTf" layoutX="65.0" layoutY="97.0" prefHeight="25.0" prefWidth="235.0" style="-fx-border-color: green;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="contraPf" layoutX="65.0" layoutY="196.0" prefHeight="25.0" prefWidth="235.0" style="-fx-border-color: green;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </PasswordField>
+        <Button fx:id="cancelarBt" layoutX="65.0" layoutY="260.0" mnemonicParsing="false" onAction="#volverAlMenu" prefHeight="42.0" prefWidth="94.0" style="-fx-border-color: green;" text="Cancelar">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+        <Button fx:id="aceptarBt" layoutX="206.0" layoutY="260.0" mnemonicParsing="false" onAction="#manejadorLogin" prefHeight="42.0" prefWidth="94.0" style="-fx-border-color: green;" text="Aceptar">
+         <font>
+            <Font name="Comic Sans MS Bold" size="14.0" />
+         </font></Button>
+    </children>
+</AnchorPane>
