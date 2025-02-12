@@ -10,9 +10,9 @@ public class Producto {
 
     private String categoria;
 
-    private BigDecimal precio;
+    private float precio;
 
-    private Boolean disponibilidad = false;
+    private int disponibilidad;
 
     public Integer getId() {
         return id;
@@ -38,19 +38,19 @@ public class Producto {
         this.categoria = categoria;
     }
 
-    public BigDecimal getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(BigDecimal precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
-    public Boolean getDisponibilidad() {
+    public int getDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(Boolean disponibilidad) {
+    public void setDisponibilidad(int disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
 

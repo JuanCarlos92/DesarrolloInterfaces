@@ -3,9 +3,13 @@ package org.example.crudrestaurante.controllers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import org.example.crudrestaurante.models.Cliente;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class ClienteController {
@@ -22,6 +26,8 @@ public class ClienteController {
     private TableColumn<Cliente, Integer> tableId;
     @FXML
     private TableColumn<Cliente, String> tableNombre, tableTelefono, tableDireccion;
+    @FXML
+    private Button btVolver;
 
     private final ObservableList<Cliente> listaClientes = FXCollections.observableArrayList();
 
@@ -152,7 +158,6 @@ public class ClienteController {
         }
     }
 
-
     @FXML
     private void borrarCliente() {
         Cliente clienteSeleccionado = tableView.getSelectionModel().getSelectedItem();
@@ -175,6 +180,23 @@ public class ClienteController {
             limpiarCampos();
         } else {
             mostrarAlerta("Error", "Seleccione un cliente para eliminar.");
+        }
+    }
+
+    @FXML
+    private void volverAlMenu() {
+        try {
+            Stage stageActual = (Stage) btVolver.getScene().getWindow();
+            stageActual.close();
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/crudrestaurante/menu-view.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load()));
+            stage.setTitle("Menú Principal");
+            stage.show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 

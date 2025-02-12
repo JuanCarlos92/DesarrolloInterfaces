@@ -33,7 +33,16 @@ public class MenuController {
     }
 
     @FXML
-    public void onClickProducto() {
+    public void onClickProducto() throws IOException {
+        Stage stagePrincipal = (Stage) btProducto.getScene().getWindow();
+        stagePrincipal.close();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/crudrestaurante/producto-view.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(loader.load()));
+        stage.setTitle("Productos");
+        stage.show();
+
     }
 
     @FXML
