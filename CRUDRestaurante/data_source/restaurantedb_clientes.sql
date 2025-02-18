@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `producto`
+-- Table structure for table `clientes`
 --
 
-DROP TABLE IF EXISTS `producto`;
+DROP TABLE IF EXISTS `clientes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `producto` (
-  `id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `clientes` (
+  `id_cliente` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
-  `categoria` varchar(50) NOT NULL,
-  `precio` decimal(10,2) NOT NULL,
-  `disponibilidad` tinyint(1) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `telefono` varchar(15) NOT NULL,
+  `direccion` text,
+  PRIMARY KEY (`id_cliente`),
+  UNIQUE KEY `telefono` (`telefono`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `producto`
+-- Dumping data for table `clientes`
 --
 
-LOCK TABLES `producto` WRITE;
-/*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (1,'Pizza Margarita','Pizza',8.50,1),(2,'Hamburguesa Clásica','Hamburguesas',6.75,1),(3,'Ensalada César','Ensaladas',5.25,1);
-/*!40000 ALTER TABLE `producto` ENABLE KEYS */;
+LOCK TABLES `clientes` WRITE;
+/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` VALUES (1,'Juan Pérez','123456789','Av. Principal 123'),(2,'María López','987654321','Calle Secundaria 456'),(3,'Carlos Gómez','555666777','Plaza Central 789'),(4,'Ana Torres','111222333','Boulevard 321');
+/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-05 11:24:18
+-- Dump completed on 2025-02-18 10:34:11
