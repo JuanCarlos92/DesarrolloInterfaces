@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="385.0" prefWidth="600.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudrestaurante.controllers.ClienteController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudrestaurante.controllers.ClienteController">
     <Label fx:id="lbTitulo" layoutX="40.0" layoutY="14.0" text="Clientes">
         <font>
           <Font name="Comic Sans MS Bold" size="20.0" />

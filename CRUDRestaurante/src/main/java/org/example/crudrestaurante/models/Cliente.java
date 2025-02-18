@@ -1,8 +1,5 @@
 package org.example.crudrestaurante.models;
 
-
-
-
 public class Cliente {
 
     private Integer id;
@@ -12,6 +9,15 @@ public class Cliente {
     private String telefono;
 
     private String direccion;
+
+    public Cliente() {}
+
+    public Cliente(int id, String nombre, String telefono, String direccion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
 
     public Integer getId() {
         return id;

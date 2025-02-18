@@ -50,7 +50,7 @@ public class ProductoController {
     @FXML
     private void cargarProductos() {
         listaProductos.clear();
-        String query = "SELECT * FROM Producto";
+        String query = "SELECT * FROM Productos";
 
         try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
 
@@ -77,7 +77,7 @@ public class ProductoController {
             float precio = Float.parseFloat(tfPrecio.getText()); // Conversión correcta
             int disponibilidad = Integer.parseInt(tfDisponibilidad.getText()); // Conversión correcta
 
-            String query = "INSERT INTO Producto (nombre, categoria, precio, disponibilidad) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO Productos (nombre, categoria, precio, disponibilidad) VALUES (?, ?, ?, ?)";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
 
@@ -109,7 +109,7 @@ public class ProductoController {
             float nuevoPrecio = tfPrecio.getText().isEmpty() ? productoSeleccionado.getPrecio() : Float.parseFloat(tfPrecio.getText());
             int nuevaDisponibilidad = tfDisponibilidad.getText().isEmpty() ? productoSeleccionado.getDisponibilidad() : Integer.parseInt(tfDisponibilidad.getText());
 
-            String query = "UPDATE Producto SET nombre = ?, categoria = ?, precio = ? , disponibilidad =? WHERE id = ?";
+            String query = "UPDATE Productos SET nombre = ?, categoria = ?, precio = ? , disponibilidad =? WHERE id = ?";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
 
@@ -138,7 +138,7 @@ public class ProductoController {
     private void buscarProducto() {
         String nombreBuscar = tfNombre.getText();
         if (!nombreBuscar.isEmpty()) {
-            String query = "SELECT * FROM Producto WHERE nombre = ?";
+            String query = "SELECT * FROM Productos WHERE nombre = ?";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
 
@@ -171,7 +171,7 @@ public class ProductoController {
     private void borrarProducto() {
         Producto productoSeleccionado = tableView.getSelectionModel().getSelectedItem();
         if (productoSeleccionado != null) {
-            String query = "DELETE FROM Producto WHERE id = ?";
+            String query = "DELETE FROM Productos WHERE id = ?";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
 

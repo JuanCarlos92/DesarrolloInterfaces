@@ -5,29 +5,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="680.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudrestaurante.controllers.ProductoController">
+<AnchorPane prefHeight="500.0" prefWidth="680.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudrestaurante.controllers.PedidoController">
     <Label fx:id="lbTitulo" layoutX="40.0" layoutY="14.0" text="Productos">
         <font>
           <Font name="Comic Sans MS Bold" size="20.0" />
         </font>
     </Label>
-    <Button fx:id="btCrear" layoutX="37.0" layoutY="305.0" mnemonicParsing="false" onAction="#crearProducto" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Crear Producto">
+    <Button fx:id="btCrear" layoutX="37.0" layoutY="305.0" mnemonicParsing="false" onAction="#crearPedido" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Crear Producto">
       <effect>
          <Reflection />
       </effect></Button>
-    <Button fx:id="btBuscar" layoutX="204.0" layoutY="305.0" mnemonicParsing="false" onAction="#buscarProducto" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Buscar Producto">
+    <Button fx:id="btBuscar" layoutX="204.0" layoutY="305.0" mnemonicParsing="false" onAction="#buscarPedido" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Buscar Producto">
       <effect>
          <Reflection />
       </effect></Button>
-    <Button fx:id="btModificar" layoutX="374.0" layoutY="305.0" mnemonicParsing="false" onAction="#modificarProducto" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Modificar Producto">
+    <Button fx:id="btModificar" layoutX="374.0" layoutY="305.0" mnemonicParsing="false" onAction="#modificarPedido" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Modificar Producto">
       <effect>
          <Reflection />
       </effect></Button>
-    <Button fx:id="btBorrar" layoutX="535.0" layoutY="305.0" mnemonicParsing="false" onAction="#borrarProducto" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Borrar Producto">
+    <Button fx:id="btBorrar" layoutX="535.0" layoutY="305.0" mnemonicParsing="false" onAction="#borrarPedido" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8; -fx-border-style: solid;" text="Borrar Producto">
       <effect>
          <Reflection />
       </effect></Button>
-    <Button fx:id="btLista" layoutX="535.0" layoutY="22.0" mnemonicParsing="false" onAction="#cargarProductos" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8;" text="Actualizar Lista">
+    <Button fx:id="btLista" layoutX="535.0" layoutY="22.0" mnemonicParsing="false" onAction="#cargarPedidos" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8;" text="Actualizar Lista">
       <effect>
          <DropShadow />
       </effect></Button>
@@ -35,7 +35,7 @@
         <effect>
             <DropShadow />
         </effect></Button>
-    <Label fx:id="lbNombre" layoutX="41.0" layoutY="59.0" text="Nombre" underline="true">
+    <Label fx:id="lbIdCliente" layoutX="41.0" layoutY="59.0" text="ID del cliente" underline="true">
         <font>
           <Font size="15.0" />
         </font>

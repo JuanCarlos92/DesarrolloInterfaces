@@ -1,6 +1,5 @@
 package org.example.crudrestaurante.models;
 
-import java.math.BigDecimal;
 
 public class Producto {
 
@@ -13,6 +12,16 @@ public class Producto {
     private float precio;
 
     private int disponibilidad;
+
+    public Producto() {}
+
+    public Producto(int id, String nombre, String categoria, float precio, int disponibilidad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.precio = precio;
+        this.disponibilidad = disponibilidad;
+    }
 
     public Integer getId() {
         return id;

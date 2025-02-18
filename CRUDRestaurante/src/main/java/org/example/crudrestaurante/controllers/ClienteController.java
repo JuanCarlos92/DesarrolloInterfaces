@@ -46,7 +46,7 @@ public class ClienteController {
     @FXML
     private void cargarClientes() {
         listaClientes.clear();
-        String query = "SELECT * FROM Cliente";
+        String query = "SELECT * FROM Clientes";
 
         try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
              Statement stmt = conn.createStatement();
@@ -69,7 +69,7 @@ public class ClienteController {
     @FXML
     private void crearCliente() {
         if (!tfNombre.getText().isEmpty() && !tfTelefono.getText().isEmpty() && !tfDireccion.getText().isEmpty()) {
-            String query = "INSERT INTO Cliente (nombre, telefono, direccion) VALUES (?, ?, ?)";
+            String query = "INSERT INTO Clientes (nombre, telefono, direccion) VALUES (?, ?, ?)";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
                  PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -100,7 +100,7 @@ public class ClienteController {
             String nuevoTelefono = tfTelefono.getText().isEmpty() ? clienteSeleccionado.getTelefono() : tfTelefono.getText();
             String nuevaDireccion = tfDireccion.getText().isEmpty() ? clienteSeleccionado.getDireccion() : tfDireccion.getText();
 
-            String query = "UPDATE Cliente SET nombre = ?, telefono = ?, direccion = ? WHERE id = ?";
+            String query = "UPDATE Clientes SET nombre = ?, telefono = ?, direccion = ? WHERE id = ?";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
                  PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -129,7 +129,7 @@ public class ClienteController {
     private void buscarCliente() {
         String nombreBuscar = tfNombre.getText();
         if (!nombreBuscar.isEmpty()) {
-            String query = "SELECT * FROM Cliente WHERE nombre = ?";
+            String query = "SELECT * FROM Clientes WHERE nombre = ?";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
                  PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -162,7 +162,7 @@ public class ClienteController {
     private void borrarCliente() {
         Cliente clienteSeleccionado = tableView.getSelectionModel().getSelectedItem();
         if (clienteSeleccionado != null) {
-            String query = "DELETE FROM Cliente WHERE id = ?";
+            String query = "DELETE FROM Clientes WHERE id = ?";
 
             try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
                  PreparedStatement stmt = conn.prepareStatement(query)) {
