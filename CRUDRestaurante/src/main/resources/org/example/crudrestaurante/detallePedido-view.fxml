@@ -8,7 +8,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="500.0" prefWidth="680.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.crudrestaurante.controllers.PedidoController">
-    <Label fx:id="lbTitulo" layoutX="40.0" layoutY="14.0" text="Pedidos">
+    <Label fx:id="lbTitulo" layoutX="40.0" layoutY="14.0" text="Detalles del pedido">
         <font>
           <Font name="Comic Sans MS Bold" size="20.0" />
         </font>
@@ -29,14 +29,6 @@
       <effect>
          <Reflection />
       </effect></Button>
-    <Button fx:id="btLista" layoutX="530.0" layoutY="22.0" mnemonicParsing="false" onAction="#cargarPedidos" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8;" text="Actualizar Lista">
-      <effect>
-         <DropShadow />
-      </effect></Button>
-    <Button fx:id="btVolver" layoutX="390.0" layoutY="22.0" mnemonicParsing="false" onAction="#volverAlMenu" prefHeight="40.0" prefWidth="121.0" style="-fx-background-color: #ffe6b8;" text=" Volver al Menú">
-        <effect>
-            <DropShadow />
-        </effect></Button>
     <Label fx:id="lbNombreCliente" layoutX="35.0" layoutY="300.0" text="Nombre del Cliente" underline="true">
         <font>
           <Font size="15.0" />
@@ -64,14 +56,13 @@
          <DropShadow />
       </effect>
    </ComboBox>
-    <TableView fx:id="tableView" layoutX="40.0" layoutY="79.0" prefHeight="200.0" prefWidth="610.0">
+    <TableView fx:id="tableView" layoutX="150.0" layoutY="79.0" prefHeight="200.0" prefWidth="450.0">
       <columns>
           <TableColumn fx:id="tableId" prefWidth="39.0" text="ID" />
-          <TableColumn fx:id="tableClienteNombre" prefWidth="119.0" text="Nombre Cliente" />
-          <TableColumn fx:id="tableFecha" prefWidth="103.0" text="Fecha" />
-          <TableColumn fx:id="tableHora" prefWidth="113.0" text="Hora" />
-          <TableColumn fx:id="tableEstado" prefWidth="126.0" text="Estado" />
-          <TableColumn fx:id="tableTotal" prefWidth="107.0" text="Total" />
+          <TableColumn fx:id="tableIdPedido" prefWidth="81.0" text="ID Pedido" />
+          <TableColumn fx:id="tableProducto" prefWidth="28.0" text="Producto" />
+          <TableColumn fx:id="tableCantidad" minWidth="0.0" prefWidth="133.0" text="Cantidad" />
+          <TableColumn fx:id="tableSubtotal" prefWidth="219.0" text="Subtotal" />
       </columns>
       <effect>
          <DropShadow />

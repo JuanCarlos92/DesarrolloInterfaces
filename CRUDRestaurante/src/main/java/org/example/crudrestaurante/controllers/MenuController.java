@@ -29,7 +29,6 @@ public class MenuController {
             stage.setScene(new Scene(loader.load()));
             stage.setTitle("Clientes");
             stage.show();
-
     }
 
     @FXML
@@ -42,11 +41,18 @@ public class MenuController {
         stage.setScene(new Scene(loader.load()));
         stage.setTitle("Productos");
         stage.show();
-
     }
 
     @FXML
-    public void onClickPedido() {
+    public void onClickPedido() throws IOException {
+        Stage stagePrincipal = (Stage) btPedido.getScene().getWindow();
+        stagePrincipal.close();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/crudrestaurante/pedido-view.fxml"));
+        Stage stage = new Stage();
+        stage.setScene(new Scene(loader.load()));
+        stage.setTitle("Productos");
+        stage.show();
     }
 
     @FXML

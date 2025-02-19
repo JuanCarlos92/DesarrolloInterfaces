@@ -3,11 +3,8 @@ package org.example.crudrestaurante.models;
 public class Cliente {
 
     private Integer id;
-
     private String nombre;
-
     private String telefono;
-
     private String direccion;
 
     public Cliente() {}

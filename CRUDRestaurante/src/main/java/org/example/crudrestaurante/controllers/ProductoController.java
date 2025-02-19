@@ -111,7 +111,8 @@ public class ProductoController {
 
             String query = "UPDATE Productos SET nombre = ?, categoria = ?, precio = ? , disponibilidad =? WHERE id = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
+            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, nuevoNombre);
                 stmt.setString(2, nuevaCategoria);
@@ -173,7 +174,8 @@ public class ProductoController {
         if (productoSeleccionado != null) {
             String query = "DELETE FROM Productos WHERE id = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
+            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setInt(1, productoSeleccionado.getId());
                 stmt.executeUpdate();
