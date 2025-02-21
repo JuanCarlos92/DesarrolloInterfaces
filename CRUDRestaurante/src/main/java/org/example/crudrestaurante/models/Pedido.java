@@ -25,6 +25,9 @@ public class Pedido {
         this.estado = estado;
         this.detalles = detalles;
     }
+    public Pedido(int id){
+        this.id = id;
+    }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }

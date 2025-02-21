@@ -19,6 +19,15 @@ public class DetallePedido {
         this.subtotal = cantidad * precio;
     }
 
+    public DetallePedido(int idDetalle, Pedido pedido, Producto producto, int cantidad, float precioProducto, float subtotal) {
+        this.id = idDetalle;
+        this.pedido = pedido;
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.precio = precioProducto;
+        this.subtotal = subtotal;
+    }
+
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public Pedido getPedido() { return pedido; }

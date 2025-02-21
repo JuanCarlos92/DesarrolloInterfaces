@@ -33,7 +33,7 @@ CREATE TABLE `detalle_pedido` (
   KEY `id_producto` (`id_producto`),
   CONSTRAINT `detalle_pedido_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`) ON DELETE CASCADE,
   CONSTRAINT `detalle_pedido_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `detalle_pedido` (
 
 LOCK TABLES `detalle_pedido` WRITE;
 /*!40000 ALTER TABLE `detalle_pedido` DISABLE KEYS */;
-INSERT INTO `detalle_pedido` VALUES (1,1,1,1,5.99),(2,1,3,1,1.50),(3,2,2,2,5.00),(4,3,4,2,15.98),(5,4,5,1,2.00);
+INSERT INTO `detalle_pedido` VALUES (1,1,1,1,5.99),(2,1,3,1,1.50),(3,2,2,2,5.00),(4,3,4,2,15.98),(5,4,1,2,11.98),(6,5,1,2,11.98),(7,5,2,3,7.50),(8,5,1,4,23.96),(9,5,1,4,23.96),(10,5,3,2,3.00),(11,2,4,1,7.99),(12,5,5,1,2.00),(13,5,2,0,0.00),(14,5,2,0,0.00);
 /*!40000 ALTER TABLE `detalle_pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-18 10:34:11
+-- Dump completed on 2025-02-21 10:35:31

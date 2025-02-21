@@ -7,16 +7,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.example.crudrestaurante.database.DatabaseConnection;
 import org.example.crudrestaurante.models.Cliente;
 
 import java.io.IOException;
 import java.sql.*;
 
 public class ClienteController {
-
-    private static final String URL = "jdbc:mysql://localhost:3306/RestauranteDB";
-    private static final String USUARIO = "root";
-    private static final String CONTRASENA = "root";
 
     @FXML
     private TextField tfNombre, tfTelefono, tfDireccion;
@@ -48,13 +45,13 @@ public class ClienteController {
         listaClientes.clear();
         String query = "SELECT * FROM Clientes";
 
-        try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+        try (Connection conn = DatabaseConnection.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
 
             while (rs.next()) {
                 Cliente cliente = new Cliente();
-                cliente.setId(rs.getInt("id"));
+                cliente.setId(rs.getInt("id_cliente"));
                 cliente.setNombre(rs.getString("nombre"));
                 cliente.setTelefono(rs.getString("telefono"));
                 cliente.setDireccion(rs.getString("direccion"));
@@ -71,7 +68,7 @@ public class ClienteController {
         if (!tfNombre.getText().isEmpty() && !tfTelefono.getText().isEmpty() && !tfDireccion.getText().isEmpty()) {
             String query = "INSERT INTO Clientes (nombre, telefono, direccion) VALUES (?, ?, ?)";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, tfNombre.getText());
@@ -87,6 +84,9 @@ public class ClienteController {
 
             cargarClientes();
             limpiarCampos();
+
+            mostrarAlertaExito("Éxito", "Cliente creado correctamente.");
+
         } else {
             mostrarAlerta("Error", "Todos los campos deben estar llenos.");
         }
@@ -102,7 +102,7 @@ public class ClienteController {
 
             String query = "UPDATE Clientes SET nombre = ?, telefono = ?, direccion = ? WHERE id = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, nuevoNombre);
@@ -119,6 +119,9 @@ public class ClienteController {
 
             cargarClientes();
             limpiarCampos();
+
+            mostrarAlertaExito("Éxito", "Cliente modificado correctamente.");
+
         } else {
             mostrarAlerta("Error", "Seleccione un cliente para modificar.");
         }
@@ -131,7 +134,7 @@ public class ClienteController {
         if (!nombreBuscar.isEmpty()) {
             String query = "SELECT * FROM Clientes WHERE nombre = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, nombreBuscar);
@@ -139,7 +142,7 @@ public class ClienteController {
                     listaClientes.clear(); // Limpiar la tabla antes de agregar el cliente encontrado
                     if (rs.next()) {
                         Cliente cliente = new Cliente();
-                        cliente.setId(rs.getInt("id"));
+                        cliente.setId(rs.getInt("id_cliente"));
                         cliente.setNombre(rs.getString("nombre"));
                         cliente.setTelefono(rs.getString("telefono"));
                         cliente.setDireccion(rs.getString("direccion"));
@@ -164,7 +167,7 @@ public class ClienteController {
         if (clienteSeleccionado != null) {
             String query = "DELETE FROM Clientes WHERE id = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setInt(1, clienteSeleccionado.getId());
@@ -178,6 +181,9 @@ public class ClienteController {
 
             cargarClientes();
             limpiarCampos();
+
+            mostrarAlertaExito("Éxito", "Cliente eliminado correctamente.");
+
         } else {
             mostrarAlerta("Error", "Seleccione un cliente para eliminar.");
         }
@@ -212,5 +218,13 @@ public class ClienteController {
         alerta.setHeaderText(null);
         alerta.setContentText(mensaje);
         alerta.showAndWait();
+    }
+
+    private void mostrarAlertaExito(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 }

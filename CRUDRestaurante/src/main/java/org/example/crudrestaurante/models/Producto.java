@@ -23,6 +23,13 @@ public class Producto {
         this.disponibilidad = disponibilidad;
     }
 
+    public Producto(int idProducto, String nombreProducto, float precioProducto) {
+        this.id = idProducto;
+        this.nombre = nombreProducto;
+        this.precio = precioProducto;
+    }
+
+
     public Integer getId() {
         return id;
     }

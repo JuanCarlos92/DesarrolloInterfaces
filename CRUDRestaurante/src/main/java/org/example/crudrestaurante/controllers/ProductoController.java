@@ -8,17 +8,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.example.crudrestaurante.models.Cliente;
+import org.example.crudrestaurante.database.DatabaseConnection;
 import org.example.crudrestaurante.models.Producto;
 
 import java.io.IOException;
 import java.sql.*;
 
 public class ProductoController {
-
-    private static final String URL = "jdbc:mysql://localhost:3306/RestauranteDB";
-    private static final String USUARIO = "root";
-    private static final String CONTRASENA = "root";
 
     @FXML
     private TextField tfNombre, tfCategoria, tfPrecio, tfDisponibilidad;
@@ -52,11 +48,12 @@ public class ProductoController {
         listaProductos.clear();
         String query = "SELECT * FROM Productos";
 
-        try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
+        try (Connection conn = DatabaseConnection.getConnection();
+             Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
 
             while (rs.next()) {
                 Producto producto = new Producto();
-                producto.setId(rs.getInt("id"));
+                producto.setId(rs.getInt("id_producto"));
                 producto.setNombre(rs.getString("nombre"));
                 producto.setCategoria(rs.getString("categoria"));
                 producto.setPrecio(rs.getFloat("precio"));
@@ -79,7 +76,8 @@ public class ProductoController {
 
             String query = "INSERT INTO Productos (nombre, categoria, precio, disponibilidad) VALUES (?, ?, ?, ?)";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
+            try (Connection conn = DatabaseConnection.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, nombre);
                 stmt.setString(2, categoria);
@@ -95,6 +93,9 @@ public class ProductoController {
 
             cargarProductos();
             limpiarCampos();
+
+            mostrarAlertaExito("Éxito", "Producto creado correctamente.");
+
         } else {
             mostrarAlerta("Error", "Todos los campos deben estar llenos.");
         }
@@ -111,7 +112,7 @@ public class ProductoController {
 
             String query = "UPDATE Productos SET nombre = ?, categoria = ?, precio = ? , disponibilidad =? WHERE id = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, nuevoNombre);
@@ -129,11 +130,13 @@ public class ProductoController {
 
             cargarProductos();
             limpiarCampos();
+
+            mostrarAlertaExito("Éxito", "Producto modificado correctamente.");
+
         } else {
             mostrarAlerta("Error", "Seleccione un producto para modificar.");
         }
     }
-
 
     @FXML
     private void buscarProducto() {
@@ -141,14 +144,15 @@ public class ProductoController {
         if (!nombreBuscar.isEmpty()) {
             String query = "SELECT * FROM Productos WHERE nombre = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA); PreparedStatement stmt = conn.prepareStatement(query)) {
+            try (Connection conn = DatabaseConnection.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setString(1, nombreBuscar);
                 try (ResultSet rs = stmt.executeQuery()) {
                     listaProductos.clear();
                     if (rs.next()) {
                         Producto producto = new Producto();
-                        producto.setId(rs.getInt("id"));
+                        producto.setId(rs.getInt("id_producto"));
                         producto.setNombre(rs.getString("nombre"));
                         producto.setCategoria(rs.getString("categoria"));
                         producto.setPrecio(rs.getFloat("precio"));
@@ -174,7 +178,7 @@ public class ProductoController {
         if (productoSeleccionado != null) {
             String query = "DELETE FROM Productos WHERE id = ?";
 
-            try (Connection conn = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            try (Connection conn = DatabaseConnection.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query)) {
 
                 stmt.setInt(1, productoSeleccionado.getId());
@@ -188,10 +192,14 @@ public class ProductoController {
 
             cargarProductos();
             limpiarCampos();
+
+            mostrarAlertaExito("Éxito", "Producto eliminado correctamente.");
+
         } else {
             mostrarAlerta("Error", "Seleccione un producto para eliminar.");
         }
     }
+
     @FXML
     private void volverAlMenu() {
         try {
@@ -216,7 +224,6 @@ public class ProductoController {
         tfDisponibilidad.clear();
     }
 
-
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle(titulo);
@@ -224,4 +231,13 @@ public class ProductoController {
         alerta.setContentText(mensaje);
         alerta.showAndWait();
     }
+
+    private void mostrarAlertaExito(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
 }

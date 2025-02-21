@@ -32,7 +32,7 @@ CREATE TABLE `pedidos` (
   PRIMARY KEY (`id_pedido`),
   KEY `id_cliente` (`id_cliente`),
   CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,1,'2025-02-18 08:08:15','pendiente',10.99,'09:14:39'),(2,2,'2025-02-18 08:08:15','en preparación',8.50,'09:14:39'),(3,3,'2025-02-18 08:08:15','entregado',15.98,'09:14:39'),(4,4,'2025-02-18 08:08:15','pendiente',7.99,'09:14:39');
+INSERT INTO `pedidos` VALUES (1,1,'2025-02-18 08:08:15','pendiente',10.99,'09:14:39'),(2,2,'2025-02-18 08:08:15','en preparación',12.99,'09:14:39'),(3,3,'2025-02-18 08:08:15','entregado',15.98,'09:14:39'),(4,4,'2025-02-18 08:08:15','pendiente',11.98,'09:14:39'),(5,3,'2025-02-18 23:00:00','pendiente',72.40,'17:01:19'),(7,2,'2025-02-18 23:00:00','pendiente',0.00,'23:22:31');
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-18 10:34:11
+-- Dump completed on 2025-02-21 10:35:31
