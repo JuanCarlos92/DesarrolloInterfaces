@@ -1,7 +1,10 @@
 package org.example;
 
 import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.data.JRCsvDataSource;
+import net.sf.jasperreports.view.JasperViewer;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -18,6 +21,7 @@ public class GenerarInforme {
             JasperCompileManager.compileReportToFile(jrxmlFile, jasperFile);
 
             // Cargar datos desde el archivo CSV
+            //JRDataSource dataSource = new JRBeanCollectionDataSource()
             JRCsvDataSource dataSource = new JRCsvDataSource(new File(csvFile));
             dataSource.setUseFirstRowAsHeader(true); // Usa la primera fila como encabezado
 
@@ -29,6 +33,7 @@ public class GenerarInforme {
             System.out.println("Informe generado correctamente en PDF: " + pdfFile);
 
             // Exportar a HTML
+            //JasperViewer.viewReport(jasperPrint);
             JasperExportManager.exportReportToHtmlFile(jasperPrint, htmlFile);
             System.out.println("Informe generado correctamente en HTML: " + htmlFile);
 
